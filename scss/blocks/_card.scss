@@ -1,0 +1,32 @@
+.card__title {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  font-weight: 400;
+  font-size: 24px;
+  z-index: 9;
+
+  @include mediaTablet {
+    font-size: 20px;
+    left: 30px;
+    bottom: 30px;
+  }
+}
+
+.card__img {
+  transition: transform 0.2s ease-in;
+
+  &:hover {
+    transform: scale(1.1);
+    filter: contrast(110%) brightness(1.2) saturate(1.2);
+  }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    color: $white;
+  }
+}

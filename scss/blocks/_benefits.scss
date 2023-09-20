@@ -1,0 +1,62 @@
+.benefits__row {
+  display: flex;
+  column-gap: 70px;
+  justify-content: center;
+
+  @include mediaTablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @include phoneTablet {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.benefits {
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "II";
+
+  @include decorNumber;
+
+    left: calc(50% + 555px);
+    transform: translate(-50%, 0%);
+  }
+}
+
+.benefits__item {
+  text-align: center;
+}
+
+.benefits__item-text {
+  font-family: $font-secondary;
+  color: $white;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.benefits__item-img {
+  margin-bottom: 53px;
+  justify-content: center;
+
+  @include mediaTablet {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 33px;
+  }
+
+  @include phoneTablet {
+    margin-bottom: 23px;
+    width: 50px;
+    height: 50px;
+  }
+}
+

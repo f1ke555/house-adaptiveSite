@@ -1,0 +1,42 @@
+.video {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "IV";
+
+
+    @include decorNumber;
+
+    left: calc(50% + 555px);
+    transform: translate(-50%, 0%);
+    line-height: 1.5;
+  }
+}
+
+.video__img {
+
+}
+
+.video__icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  @include mediaTablet {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.video__link {
+  position: relative;
+  display: block;
+  text-align: center;
+
+  &:hover {
+    filter: brightness(110%);
+  }
+}
